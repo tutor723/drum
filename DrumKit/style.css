@@ -1,13 +1,10 @@
-body {
-   
-  }
-
-  .center {
+.center {
     
-margin-top: 300px;
-margin-left: 300px;
+
 transform: scale(0.7);
 background-color: pink;
+width: 80px;
+height: 80px;
   }
   .click-zoom  {
     margin: 100px;
@@ -15,4 +12,25 @@ background-color: pink;
     cursor: zoom-in
   }
 
+  .boom{
+    display: inline-block;
+    margin-left: 110px;
+  }
+  p{
+    color: blue;
+  }
+  #heading{
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-indent: 10px;
+    font-size: 40px;
+  }
+#image{
+  display: inline-block;
+  margin-left: 120px;
+}
   
+
+#button{
+  margin-left: 700px;
+  margin-top: 40px;
+}
