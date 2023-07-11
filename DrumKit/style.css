@@ -1,4 +1,12 @@
-.center {
+body {
+  background-image: url(./image/back.jpg );
+  background-size: cover;
+
+
+  
+  }
+
+  .center {
     
 
 transform: scale(0.7);
@@ -25,12 +33,51 @@ height: 80px;
     font-size: 40px;
   }
 #image{
-  display: inline-block;
-  margin-left: 120px;
+  display: flex;
+ 
 }
-  
+#image1, #image2,#image3,#image4{
+display: flex;
+flex: auto;
+background-color: transparent;
+ mix-blend-mode:multiply;
+}
+
+.shake1{
+  animation: Shake 0.5s linear infinite;
+}
+@keyframes Shake {
+  0% {
+      transform: rotate(5deg);
+  }
+
+  25% {
+      transform: rotate(-6deg);
+  }
+
+  50% {
+      transform: rotate(5deg);
+  }
+
+  75% {
+      transform: rotate(-6deg);
+  }
+
+  100% {
+      transform: rotate(5deg);
+  }
+}
+#image:hover {
+  animation: Shake 0.5s linear infinite;
+}
 
 #button{
   margin-left: 700px;
   margin-top: 40px;
+}
+
+.grow { 
+  -ms-transform: scale(0.3); /* IE 9 */
+  -webkit-transform: scale(0.3); /* Safari 3-8 */
+  transform: scale(0.3); 
 }
