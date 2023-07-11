@@ -1,0 +1,18 @@
+body {
+   
+  }
+
+  .center {
+    
+margin-top: 300px;
+margin-left: 300px;
+transform: scale(0.7);
+background-color: pink;
+  }
+  .click-zoom  {
+    margin: 100px;
+    transition: transform 0.25s ease;
+    cursor: zoom-in
+  }
+
+  

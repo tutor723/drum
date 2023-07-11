@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrumKit</title>
+    <link rel="stylesheet" href="style.css">
+   
+
+
+</head>
+<body>
+    <div class ="instruction">
+   <div class ="drum">
+    <p>B</p>
+    <p>BOOM</p>
+    <audio id="boom1" src="./sounds/my.mp3"></audio>
+    </div>
+
+    <div class ="drum">
+    <p>S</p>
+    <p>CLAP</p>
+<audio id="boom2" src="./sounds/movie.mp3"></audio>
+</div>
+
+<div class ="drum">
+    <p>P</p>
+    <p>CLAP</p>
+<audio id="boom3" src="./sounds/new.mp3"></audio>
+</div>
+<div class ="drum">
+    <p>Q</p>
+    <p>CLAP</p>
+<audio id="boom4" src="./sounds/gun.mp3"></audio>
+</div>
+<div class ="drum">
+    <p>R</p>
+    <p>CLAP</p>
+<audio id="boom5" src="./sounds/chiptune.mp3"></audio>
+</div>
+<div class ="drum">
+    <p>S</p>
+    <p>CLAP</p>
+<audio id="boom6" src="./sounds/short.mp3"></audio>
+</div>
+<div class ="drum">
+    <p>T</p>
+    <p>CLAP</p>
+<audio id="boom7" src="./sounds/system.mp3"></audio>
+</div>
+<div class ="drum">
+    <p>K</p>
+    <p>CLAP</p>
+<audio id="boom8" src="./sounds/fastgun.mp3"></audio>
+</div>
+<div class ="drum">
+    <p>L</p>
+    <p>CLAP</p>
+<audio id="boom9" src="./sounds/kick.mp3"></audio>
+</div>
+<audio id="boom10" src="./sounds/tom.mp3"></audio>
+</div>
+    <img src="image/drum.jpg" alt="drum" style="width:250px;height:250px;"  class="center">
+
+    <button id="playBtn"  onclick="myFunction()">Play Sound</button>
+    <audio id="myAudio">
+        <source src="my.mp3" >
+      </audio>
+    
+</body>
+<script>
+    let boom = document.getElementById("myAudio");
+
+
+function myFunction() {
+    boom.play();
+}
+
+    document.addEventListener('keydown', function(e) {
+  if(e.keyCode == 66){
+    boom1.play();
+  }
+  
+  else if(e.keyCode == 65){
+    boom2.play();
+  }
+
+  else if(e.keyCode == 80){
+    boom3.play();
+  }
+  else if(e.keyCode == 81){
+    boom4.play();
+  }
+  else if(e.keyCode == 82){
+    boom5.play();
+  }
+  else if(e.keyCode == 83){
+    boom6.play();
+  }
+  else if(e.keyCode == 84){
+    boom7.play();
+  }
+  else if(e.keyCode == 75){
+    boom8.play();
+  }
+  else if(e.keyCode == 76){
+    boom5.play();
+  }
+  else {
+    boom8.play();
+  }
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+});
+  
+</script>
+</html>
