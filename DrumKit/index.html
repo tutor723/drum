@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,65 +13,98 @@
 <body>
     <div class ="instruction">
    <div class ="drum">
-    <p>B</p>
-    <p>BOOM</p>
+    <div class = "boom">
+    <p id ="heading">B</p>
+    <p>Type B</p>
     <audio id="boom1" src="./sounds/my.mp3"></audio>
     </div>
 
-    <div class ="drum">
-    <p>S</p>
-    <p>CLAP</p>
-<audio id="boom2" src="./sounds/movie.mp3"></audio>
-</div>
+    <div class = "boom">
+    <p id ="heading">A</p>
+    <p>Type A</p>
+    <audio id="boom2" src="./sounds/movie.mp3"></audio>
+    </div>
 
-<div class ="drum">
-    <p>P</p>
-    <p>CLAP</p>
-<audio id="boom3" src="./sounds/new.mp3"></audio>
-</div>
-<div class ="drum">
-    <p>Q</p>
-    <p>CLAP</p>
-<audio id="boom4" src="./sounds/gun.mp3"></audio>
-</div>
-<div class ="drum">
-    <p>R</p>
-    <p>CLAP</p>
-<audio id="boom5" src="./sounds/chiptune.mp3"></audio>
-</div>
-<div class ="drum">
-    <p>S</p>
-    <p>CLAP</p>
-<audio id="boom6" src="./sounds/short.mp3"></audio>
-</div>
-<div class ="drum">
-    <p>T</p>
-    <p>CLAP</p>
-<audio id="boom7" src="./sounds/system.mp3"></audio>
-</div>
-<div class ="drum">
-    <p>K</p>
-    <p>CLAP</p>
-<audio id="boom8" src="./sounds/fastgun.mp3"></audio>
-</div>
-<div class ="drum">
-    <p>L</p>
-    <p>CLAP</p>
-<audio id="boom9" src="./sounds/kick.mp3"></audio>
-</div>
+  
+    <div class = "boom">
+    <p id ="heading">P</p>
+    <p>Type P</p>
+   <audio id="boom3" src="./sounds/new.mp3"></audio>
+   </div>
+
+    
+    <div class = "boom">
+    <p id ="heading">Q</p>
+    <p>Type Q</p>
+    <audio id="boom4" src="./sounds/gun.mp3"></audio>
+    </div>
+
+
+    <div class = "boom">
+    <p id ="heading">R</p>
+    <p>Type R</p>
+    <audio id="boom5" src="./sounds/chiptune.mp3"></audio>
+   </div>
+
+    <div class = "boom">
+    <p id ="heading">S</p>
+    <p>Type S</p>
+    <audio id="boom6" src="./sounds/short.mp3"></audio>
+   </div>
+
+
+    <div class = "boom">
+    <p id ="heading">T</p>
+    <p>Type T</p>
+    <audio id="boom7" src="./sounds/system.mp3"></audio>
+    </div>
+
+    <div class = "boom">
+    <p id ="heading">K</p>
+    <p>Type K</p>
+    <audio id="boom8" src="./sounds/fastgun.mp3"></audio>
+    </div>
+
+
+    <div class = "boom">
+    <p id ="heading">L</p>
+    <p>Type L</p>
+    <audio id="boom9" src="./sounds/kick.mp3"></audio>
+   </div>
+
+
 <audio id="boom10" src="./sounds/tom.mp3"></audio>
 </div>
+</div>
+<div id ="image">
+<div id ="image1">
     <img src="image/drum.jpg" alt="drum" style="width:250px;height:250px;"  class="center">
+</div>
+<div id ="image2">
+    <img src="image/drum1.jpg" alt="drum" style="width:250px;height:250px;"  class="center">
+</div>
+    <div id ="image3">
+    <img src="image/drum.jpg" alt="drum" style="width:250px;height:250px;"  class="center">
+</div>
 
+  
+    <div id ="image4">
+    <img src="image/drum1.jpg" alt="drum" style="width:250px;height:250px;"  class="center"> 
+</div>
+
+
+</div>
+
+<div id ="button">
     <button id="playBtn"  onclick="myFunction()">Play Sound</button>
     <audio id="myAudio">
         <source src="my.mp3" >
       </audio>
-    
+    </div>
 </body>
 <script>
     let boom = document.getElementById("myAudio");
-
+const image1 = document.getElementById("image1")
 
 function myFunction() {
     boom.play();
@@ -79,29 +113,64 @@ function myFunction() {
     document.addEventListener('keydown', function(e) {
   if(e.keyCode == 66){
     boom1.play();
+    image1.classList.add("shake1");
+    setTimeout(() => {
+            image1.classList.remove('shake1')
+        }, 5)
+    
   }
   
   else if(e.keyCode == 65){
     boom2.play();
+    image2.classList.add("grow");
+    setTimeout(() => {
+            image2.classList.remove('grow')
+        },5)
+        boom2.pause();
   }
 
   else if(e.keyCode == 80){
     boom3.play();
+    image3.classList.add("shake1");
+    setTimeout(() => {
+            image3.classList.remove('shake1')
+        }, 10)
+    
   }
   else if(e.keyCode == 81){
     boom4.play();
+    image1.classList.add("shake1");
+    setTimeout(() => {
+            image1.classList.remove('shake1')
+        }, 1000)
   }
   else if(e.keyCode == 82){
     boom5.play();
+    image2.classList.add("grow");
+    setTimeout(() => {
+            image2.classList.remove('grow')
+        },1000)
   }
   else if(e.keyCode == 83){
     boom6.play();
+    image2.classList.add("grow");
+    setTimeout(() => {
+            image2.classList.remove('grow')
+        },1000)
   }
   else if(e.keyCode == 84){
     boom7.play();
+    image2.classList.add("grow");
+    setTimeout(() => {
+            image2.classList.remove('grow')
+        },1000)
   }
   else if(e.keyCode == 75){
     boom8.play();
+    image4.classList.add("grow");
+    setTimeout(() => {
+            image4.classList.remove('grow')
+        },1000)
   }
   else if(e.keyCode == 76){
     boom5.play();
