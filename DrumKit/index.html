@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,13 +15,13 @@
     <div class = "boom">
     <p id ="heading">B</p>
     <p>Type B</p>
-    <audio id="boom1" src="./sounds/my.mp3"></audio>
+    <audio id="boom1" src="./sounds/clap.mp3"></audio>
     </div>
 
     <div class = "boom">
     <p id ="heading">A</p>
     <p>Type A</p>
-    <audio id="boom2" src="./sounds/movie.mp3"></audio>
+    <audio id="boom2" src="./sounds/tom.mp3"></audio>
     </div>
 
   
@@ -107,7 +106,11 @@
 const image1 = document.getElementById("image1")
 
 function myFunction() {
-    boom.play();
+    setTimeout(() => {
+        boom.play()
+        }, 5)
+    
+   
 }
 
     document.addEventListener('keydown', function(e) {
@@ -117,6 +120,7 @@ function myFunction() {
     setTimeout(() => {
             image1.classList.remove('shake1')
         }, 5)
+       
     
   }
   
@@ -126,7 +130,8 @@ function myFunction() {
     setTimeout(() => {
             image2.classList.remove('grow')
         },5)
-        boom2.pause();
+      
+        
   }
 
   else if(e.keyCode == 80){
@@ -135,6 +140,7 @@ function myFunction() {
     setTimeout(() => {
             image3.classList.remove('shake1')
         }, 10)
+       
     
   }
   else if(e.keyCode == 81){
@@ -142,38 +148,46 @@ function myFunction() {
     image1.classList.add("shake1");
     setTimeout(() => {
             image1.classList.remove('shake1')
-        }, 1000)
+        }, 10)
+        
   }
   else if(e.keyCode == 82){
     boom5.play();
-    image2.classList.add("grow");
+    image3.classList.add("grow");
     setTimeout(() => {
-            image2.classList.remove('grow')
-        },1000)
+            image3.classList.remove('grow')
+        },10)
+      
   }
   else if(e.keyCode == 83){
     boom6.play();
-    image2.classList.add("grow");
+    image4.classList.add("grow");
     setTimeout(() => {
-            image2.classList.remove('grow')
-        },1000)
+            image4.classList.remove('grow')
+        },10)
+        
   }
   else if(e.keyCode == 84){
     boom7.play();
-    image2.classList.add("grow");
+    image1.classList.add("grow");
     setTimeout(() => {
-            image2.classList.remove('grow')
-        },1000)
+            image1.classList.remove('grow')
+        },10)
+       
   }
   else if(e.keyCode == 75){
     boom8.play();
     image4.classList.add("grow");
     setTimeout(() => {
             image4.classList.remove('grow')
-        },1000)
+        },10)
   }
   else if(e.keyCode == 76){
     boom5.play();
+    image1.classList.add("grow");
+    setTimeout(() => {
+            image1.classList.remove('grow')
+        },10)
   }
   else {
     boom8.play();
