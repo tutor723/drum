@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=B612+Mono');
+
+html, body,#name {
+    font-family: "B612 Mono", monospace;
+    text-align: center;
+}
+
+body {
+  /* background-image: url(./image/back.jpg );
+  background-size: cover; */
+background-color: antiquewhite;
+
+  
+  }
+
+  .center {
+    
+
+transform: scale(0.7);
+background-color: pink;
+width: 80px;
+height: 80px;
+  }
+  .click-zoom  {
+    margin: 100px;
+    transition: transform 0.25s ease;
+    cursor: zoom-in
+  }
+
+  .boom{
+     display: inline-block;
+ margin-left: 50px;
+  }
+  p{
+    color: blue;
+  }
+  #heading{
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-indent: 10px;
+    font-size: 40px;
+  }
+#image{
+  display: flex;
+ 
+}
+#image1, #image2,#image3,#image4{
+display: flex;
+flex: auto;
+  background-color: transparent;
+ mix-blend-mode:multiply;
+}
+
+.shake1{
+  animation: Shake 0.5s linear infinite;
+}
+@keyframes Shake {
+  0% {
+      transform: rotate(5deg);
+  }
+
+  25% {
+      transform: rotate(-6deg);
+  }
+
+  50% {
+      transform: rotate(5deg);
+  }
+
+  75% {
+      transform: rotate(-6deg);
+  }
+
+  100% {
+      transform: rotate(5deg);
+  }
+}
+#image:hover {
+  animation: Shake 0.1s linear infinite;
+}
+
+#button{
+  margin-left: 40px;
+  margin-top: 40px;
+}
+#playBtn {
+  background-color: #008CBA;
+  margin: 4px 2px;
+cursor: pointer;
+border-radius: 8px;
+padding:14px 40px;
+font-size: 20px;
+}
+.grow { 
+  -ms-transform: scale(0.3); /* IE 9 */
+  -webkit-transform: scale(0.3); /* Safari 3-8 */
+  transform: scale(0.3); 
+}
+
+@media  only screen and (max-width: 1300px)  {
+  #playBtn,#button{
+    margin-left:auto;margin-right:auto;display:block;
+  }
+}
